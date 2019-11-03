@@ -19,5 +19,5 @@ management:
       exposure:
         include: "*"
         
-env: dev
+env: devbgy
 branch: master
