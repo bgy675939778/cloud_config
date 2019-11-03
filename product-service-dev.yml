@@ -1,21 +1,23 @@
 server:
   port: 8771
 
-
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
 spring:
-  application:
-    name: product-service
   zipkin:
     base-url: http://localhost:9411
   sleuth:
     sampler:
       probability: 1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
       
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
 env: dev
 branch: master
